@@ -1,0 +1,467 @@
+/* ===============================
+RESET
+=============================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0f1722;
+color:#e6edf5;
+line-height:1.5;
+}
+
+
+/* ===============================
+HEADER
+=============================== */
+
+.header{
+width:100%;
+background:#0b111b;
+border-bottom:1px solid #1f2a38;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.header-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+}
+
+
+/* ===============================
+LOGO
+=============================== */
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo-img{
+height:55px;
+}
+
+.logo-text{
+font-size:22px;
+color:#4cc9ff;
+font-weight:bold;
+}
+
+
+/* ===============================
+MENU
+=============================== */
+
+.menu-list{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.menu-link{
+text-decoration:none;
+color:#d5dde6;
+font-weight:bold;
+transition:0.2s;
+position:relative;
+}
+
+.menu-link:hover{
+color:#4cc9ff;
+}
+
+
+/* ===============================
+MENU ATIVO
+=============================== */
+
+.menu-link.ativo{
+color:#4cc9ff;
+}
+
+.menu-link.ativo::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:100%;
+height:2px;
+background:#4cc9ff;
+}
+
+
+/* ===============================
+DROPDOWN MENU
+=============================== */
+
+.dropdown{
+position:relative;
+}
+
+.dropdown-menu{
+position:absolute;
+top:35px;
+left:0;
+background:#141c2a;
+list-style:none;
+padding:10px 0;
+border-radius:8px;
+min-width:170px;
+display:none;
+box-shadow:0 6px 18px rgba(0,0,0,0.5);
+border:1px solid #1f2a38;
+}
+
+.dropdown-menu li{
+padding:10px 16px;
+}
+
+.dropdown-menu a{
+color:#d5dde6;
+text-decoration:none;
+font-weight:bold;
+display:block;
+transition:0.2s;
+}
+
+.dropdown-menu a:hover{
+color:#4cc9ff;
+background:#1a2535;
+border-radius:4px;
+}
+
+.dropdown:hover .dropdown-menu{
+display:block;
+}
+
+
+/* ===============================
+SEÇÕES
+=============================== */
+
+section{
+padding:35px 40px;
+max-width:1200px;
+margin:auto;
+}
+
+h2{
+margin-bottom:20px;
+font-size:22px;
+}
+
+
+/* ===============================
+LIGA
+=============================== */
+
+.liga{
+background:#0b111b;
+border-bottom:1px solid #1f2a38;
+}
+
+
+/* ===============================
+AREA PRINCIPAL
+=============================== */
+
+.area-jogos{
+background:#0f1722;
+}
+
+.jogos-container{
+display:grid;
+grid-template-columns:1fr 1.5fr;
+gap:25px;
+}
+
+
+/* ===============================
+LISTA DE JOGOS
+=============================== */
+
+.lista-jogos{
+background:#141c2a;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
+max-height:600px;
+overflow-y:auto;
+}
+
+
+/* ===============================
+CARD DO JOGO
+=============================== */
+
+.jogo-card{
+padding:12px;
+border-bottom:1px solid #1f2a38;
+cursor:pointer;
+transition:0.2s;
+}
+
+.jogo-card:hover{
+background:#1a2535;
+}
+
+.jogo-card.ativo{
+background:#1d2b3f;
+border-left:3px solid #4cc9ff;
+}
+
+
+/* ===============================
+LINHA DO JOGO
+=============================== */
+
+.linha-jogo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.hora{
+width:60px;
+font-weight:bold;
+color:#8fa4b7;
+}
+
+.times{
+flex:1;
+display:flex;
+flex-direction:column;
+gap:4px;
+}
+
+.team{
+display:flex;
+align-items:center;
+gap:8px;
+font-weight:bold;
+font-size:14px;
+}
+
+.team .logo{
+width:22px;
+height:22px;
+object-fit:contain;
+}
+
+
+/* ===============================
+DETALHE DO JOGO
+=============================== */
+
+.detalhe-jogo{
+background:#141c2a;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
+min-height:300px;
+}
+
+
+/* ===============================
+TIMES DETALHE
+=============================== */
+
+.times-detalhe{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:25px;
+margin-top:15px;
+}
+
+.placar{
+font-weight:bold;
+color:#8fa4b7;
+}
+
+
+/* ===============================
+PROBABILIDADES
+=============================== */
+
+.probabilidades{
+margin-top:25px;
+}
+
+.prob-item{
+margin-bottom:12px;
+font-size:14px;
+}
+
+.barra{
+width:100%;
+height:10px;
+background:#1f2a38;
+border-radius:6px;
+overflow:hidden;
+margin-top:4px;
+}
+
+.barra-fill{
+height:100%;
+}
+
+.casa{
+background:#4cc9ff;
+}
+
+.empate{
+background:#8fa4b7;
+}
+
+.fora{
+background:#ff5c5c;
+}
+
+
+/* ===============================
+ESTATÍSTICAS
+=============================== */
+
+.estatisticas{
+margin-top:20px;
+font-size:14px;
+color:#a7b4c3;
+}
+
+
+/* ===============================
+TABELA
+=============================== */
+
+.tabela-container{
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:#141c2a;
+border-radius:8px;
+overflow:hidden;
+}
+
+th,td{
+padding:10px;
+text-align:center;
+border-bottom:1px solid #1f2a38;
+}
+
+th{
+background:#0b111b;
+color:#4cc9ff;
+}
+
+
+/* ===============================
+ARTILHEIROS
+=============================== */
+
+.lista-artilheiros{
+list-style:none;
+}
+
+.lista-artilheiros li{
+padding:6px 0;
+}
+
+
+/* ===============================
+ANÁLISE
+=============================== */
+
+.analise-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.time-analise{
+background:#141c2a;
+padding:15px;
+border-radius:8px;
+}
+
+
+/* ===============================
+PREVISÕES
+=============================== */
+
+.previsoes-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.previsao{
+background:#141c2a;
+padding:15px;
+border-radius:8px;
+}
+
+
+/* ===============================
+FOOTER
+=============================== */
+
+.footer{
+margin-top:40px;
+padding:20px;
+text-align:center;
+background:#0b111b;
+color:#8fa4b7;
+font-size:14px;
+}
+
+
+/* ===============================
+RESPONSIVO
+=============================== */
+
+@media(max-width:900px){
+
+.jogos-container{
+grid-template-columns:1fr;
+}
+
+.lista-jogos{
+max-height:none;
+}
+
+}
+
+@media(max-width:768px){
+
+.header-container{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+.menu-list{
+flex-wrap:wrap;
+gap:12px;
+}
+
+section{
+padding:25px 20px;
+}
+
+}
