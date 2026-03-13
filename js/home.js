@@ -2,7 +2,7 @@
 // BUSCAR JOGOS DO ARQUIVO JSON
 // ===============================
 
-fetch("../data/jogos.json")
+fetch("data/jogos.json")
 
 .then(response => response.json())
 
@@ -33,12 +33,12 @@ card.innerHTML = `
 <div class="times">
 
 <div class="team">
-<img src="../assets/logos/${jogo.logoCasa}" class="logo">
+<img src="assets/logos/${jogo.logoCasa}" class="logo">
 <span>${jogo.timeCasa}</span>
 </div>
 
 <div class="team">
-<img src="../assets/logos/${jogo.logoFora}" class="logo">
+<img src="assets/logos/${jogo.logoFora}" class="logo">
 <span>${jogo.timeFora}</span>
 </div>
 
@@ -68,14 +68,14 @@ detalhe.innerHTML = `
 <div class="times-detalhe">
 
 <div class="team">
-<img src="../assets/logos/${jogo.logoCasa}" class="logo">
+<img src="assets/logos/${jogo.logoCasa}" class="logo">
 <span>${jogo.timeCasa}</span>
 </div>
 
 <span class="placar">vs</span>
 
 <div class="team">
-<img src="../assets/logos/${jogo.logoFora}" class="logo">
+<img src="assets/logos/${jogo.logoFora}" class="logo">
 <span>${jogo.timeFora}</span>
 </div>
 
